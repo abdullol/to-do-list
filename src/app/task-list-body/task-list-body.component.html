@@ -1,0 +1,7 @@
+<form>
+    <input id="" (change)="todoList($event)">
+</form>
+
+<div *ngFor="let item of this.db; let i=index">
+    <p>{{item.name}}</p>
+</div>
