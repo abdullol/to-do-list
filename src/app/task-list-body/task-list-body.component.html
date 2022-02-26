@@ -1,7 +1,10 @@
 <form>
-    <input id="" (change)="todoList($event)">
+    <input type="text" (change)="todoList($event)">
 </form>
 
 <div *ngFor="let item of this.db; let i=index">
-    <p>{{item.name}}</p>
+    <p>{{item.name}}  ---   {{item.id}}</p>
+    <button (click)="deleteItem(item.id)">
+        Delete
+    </button>
 </div>

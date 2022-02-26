@@ -30,4 +30,12 @@ export class TaskListBodyComponent implements OnInit {
       this.db = x;
     });
   }
+
+  // tslint:disable-next-line:typedef
+  async deleteItem(index) {
+    this.dbService.delete('people', index).subscribe((status) => {
+      console.log(status);
+      this.db = status;
+    });
+  }
 }
